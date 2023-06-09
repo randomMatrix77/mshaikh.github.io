@@ -70,3 +70,21 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-section {
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+.container-fluid {
+  background-color: #000000;
+}
+
+.project-preview {
+  cursor: pointer;
+}
