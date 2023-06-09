@@ -107,3 +107,13 @@ particlesJS("particles-js", {
   },
   retina_detect: true
 });
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('.navbar').addClass('scrolled');
+    } else {
+      $('.navbar').removeClass('scrolled');
+    }
+  });
+});
