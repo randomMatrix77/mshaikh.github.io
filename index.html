@@ -1,35 +1,207 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>Anon Developer</title>
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles go here */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      background-image: url('');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  </style>
 </head>
-
 <body>
+  <div id="particles-js"></div>
 
-<div id="particles">
-  <div id="intro">
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Mohsin Shaikh&nbsp<a href="MohsinShaikh.pdf" style="color: white;"><img src="assets/resume.png" height="35" width="35"></a></h2>
-        <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-    <a href="https://linkedin.com/in/mohsin-shaikh-123266158" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="shaikh.mohsin@protonmail.com" style="color: white;"><i class="fa-sharp fa-light fa-envelope" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://github.com/randomMatrix77" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-  </div>
-  <div>
-    
-  </div>
-</div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>This is where you can write about yourself and your skills.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="path_to_image.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Description of Project 1</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above card structure for each project -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>
