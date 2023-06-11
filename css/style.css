@@ -41,6 +41,16 @@
   color: #ffffff;
 }
 
+.container-fluid-mod {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+
+}
+
 .hero-text h1 {
   font-size: 48px;
   margin-bottom: 20px;
@@ -87,4 +97,22 @@ body {
 
 .project-preview {
   cursor: pointer;
+}
+
+.gallery {
+  margin: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.spacer {
+  height: 2000px;
 }
